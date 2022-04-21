@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   
+    <meta charset="UTF8">
+    <meta name="viemport" content="width=device-width>
+    <title>Meu Decodificador Alura</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=David+Libre&family=MedievalSharp&family=Montserrat:wght@100;200;300;500&display=swap"
+        rel="stylesheet">
+</head>
+<header>
+    <h1 id="titulo">Monkey D Yeshua Decodificador Alura</h1>
+</header>
+
+<body>
+    <div class="central">
+        <div class="logo"><img src="img/Vector.png"></div>
+        <div class="ssj"><img src="img/ssj.png"></div>
+        <div class="alerta">Apenas letras minúscula e sem acento.</div>
+            <section class="form box">
+                <input class="input" type="text" name="input-chave" id="input-chave" required
+                    placeholder="Digite seu texto." onkeyup="value=value.replace(/[^\a-\z\u4E00-\u9FA5\ ]/g,'')"
+                    onpaste="value=value.replace(/[^\a-z\u4E00-\u9FA5\ ]/g,'')"
+                    oncontextmenu="value=value.replace(/[^\a-\z\u4E00-\u9FA5\ ]/g,'')"> 
+                <button class="btn" type="submit" value="criptografar" id="butao-code">Criptografar</button>
+                <button class="btn magia" type="submit" value="descriptografar" id="butao-decode">Descriptografar</button>
+            </section>
+            <section class="msg box">
+                <form>
+                <textarea class="input bloco" type="text" id="chave" readonly=“true" placeholder="Esperando a criptografa ou descriptografa" style="resize: none;" cols="10" rows="5" tabindex="101" data-min-length=""></textarea>
+                <input class="button copy" onclick="copiarTexto()" type="submit" value="copiar" id="butao-copiar">
+                </form>
+            </section>
+    </div>    
+    <div class="baixo"></div>
+    </main>
+
+    <ul class="quadros"></ul>
+        
+        
+
+</body>
+<script src="js/magica.js" defer></script>
+<footer class="rodape">
+    <div class="assinatura"><img src="img/fundo.png"></div>
+    <div class="assinatura">By Dark Avange 2022 © Copyright</div>
+
+</footer>
+
+
+</html>
